@@ -1,6 +1,7 @@
 # Servisim Backend
 
-[![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/smddzcy/cv/master/LICENSE)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) [![MIT License](https://img.shields.io/dub/l/vibe-d.svg)](https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) [![Known Vulnerabilities](https://snyk.io/test/github/BounHackers/servisim-backend/badge.svg)](https://snyk.io/test/github/BounHackers/servisim-backend)
+
 
 It's the Ruby on Rails REST API backend for the mobile application, called Servisim.
 
@@ -74,4 +75,4 @@ For your PR to be accepted, it should pass all the tests and it shouldn't contai
 
 ## License
 
-[MIT](LICENSE)
+[MIT](https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE)
