@@ -1,5 +1,7 @@
 # Servisim Backend
 
+[![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://raw.githubusercontent.com/smddzcy/cv/master/LICENSE)
+
 It's the Ruby on Rails REST API backend for the mobile application, called Servisim.
 
 Current API root: https://servisimapp.herokuapp.com/api/v1/
@@ -69,3 +71,7 @@ For your PR to be accepted, it should pass all the tests and it shouldn't contai
 3. After your tests pass, request a review from a contributor or code-owner.
 
 4. When your PR passes the review, merge it to `develop`; our CD system will automatically push it to production when it's on `master`.
+
+## License
+
+[MIT](LICENSE)
