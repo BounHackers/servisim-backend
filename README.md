@@ -68,4 +68,4 @@ For your PR to be accepted, it should pass all the tests and it shouldn't contai
 
 3. After your tests pass, request a review from a contributor or code-owner.
 
-4. When your PR passes the review, merge it to `develop`; our CD system will automatically push it to production.
+4. When your PR passes the review, merge it to `develop`; our CD system will automatically push it to production when it's on `master`.
