@@ -3,7 +3,7 @@
     "test": {
       "scripts": {
         "test-setup": "gem install rubocop",
-        "test": "rubocop ."
+        "test": "bundle exec rubocop --auto-correct"
       },
       "addons":[
         "heroku-redis",
