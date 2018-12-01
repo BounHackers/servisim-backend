@@ -51,7 +51,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def driver_params
-        params.require(:driver).permit(:school_id, :username, :password)
+        params.permit(:school_id, :username, :password)
       end
     end
   end

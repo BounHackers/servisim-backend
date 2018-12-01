@@ -46,7 +46,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-gem 'active_model_serializers'
+gem 'active_model_serializers', '>= 0.10.0'
 gem 'bcrypt'
 gem 'rack-cors', require: 'rack/cors'
 gem 'sdoc'
