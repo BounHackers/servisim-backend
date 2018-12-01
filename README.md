@@ -57,4 +57,15 @@ bundle exec rubocop --auto-correct
 
 ## Deployment
 
-Deployment will be done automatically by our CI/CD system.
+Deployment will be done automatically by our CI/CD system. We're using Heroku as our PaaS solution and a CI/CD system.
+
+We have 2 branches: `develop` and `master`. `master` branch is protected from direct pushes, and PR merges to `master` is also protected by our CI system.
+For your PR to be accepted, it should pass all the tests and it shouldn't contain any linting errors. Here's the steps you should take from opening your PR to deployment:
+
+1. Push your branch and open your PR, according to the PR descriptions above.
+
+2. Tests will be run automatically by our CI integration; so just wait a bit. In case your tests fail, click on the link to see the errors and fix them.
+
+3. After your tests pass, request a review from a contributor or code-owner.
+
+4. When your PR passes the review, merge it to `develop`; our CD system will automatically push it to production.

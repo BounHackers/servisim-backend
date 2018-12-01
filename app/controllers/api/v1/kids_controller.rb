@@ -22,7 +22,7 @@ module Api
         @kid = Kid.new(kid_params)
 
         if @kid.save
-          render json: @kid, status: :created, location: @kid
+          render json: @kid, status: :created
         else
           render json: @kid.errors, status: :unprocessable_entity
         end

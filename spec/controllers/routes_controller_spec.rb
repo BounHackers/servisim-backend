@@ -25,7 +25,7 @@ require 'rails_helper'
 # removed from Rails core in Rails 5, but can be added back in via the
 # `rails-controller-testing` gem.
 
-RSpec.describe RoutesController, type: :controller do
+RSpec.describe Api::V1::RoutesController, type: :controller do
   # This should return the minimal set of attributes required to create a valid
   # Route. As you add validations to Route, be sure to
   # adjust the attributes here as well.

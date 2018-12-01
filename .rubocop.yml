@@ -1,0 +1,30 @@
+AllCops:   
+  Exclude:     
+    - 'db/**/*'     
+    - 'config/**/*'     
+    - 'script/**/*'
+    - 'bin/**/*'
+
+Style/Documentation:
+  Exclude:
+    - '**/*'
+
+Metrics/LineLength:
+  Exclude:
+    - '**/*'
+
+Metrics/BlockLength:
+  Exclude:
+    - '**/*'
+
+Metrics/AbcSize:
+  Exclude:
+    - '**/*'
+
+Metrics/MethodLength:
+  Exclude:
+    - '**/*'
+
+Lint/UselessAssignment:
+  Exclude:
+    - '**/*'

@@ -4,8 +4,8 @@ require 'rails_helper'
 
 RSpec.describe 'Schools', type: :request do
   describe 'GET /schools' do
-    it 'works! (now write some real specs)' do
-      get schools_path
+    it 'should return status 200' do
+      get '/api/v1/schools'
       expect(response).to have_http_status(200)
     end
   end
