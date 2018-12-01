@@ -54,7 +54,19 @@ bundle exec rubocop --auto-correct
 - [Read this very good post and follow the advices](https://medium.com/@mscccc/jr-developers-1-pull-requests-you-39a11c3bdd94)
 - Follow the PR template and remove the unused sections
 - Always keep this in mind that you've spent a good amount of time on this issue trying to find a solution but the reviewer has no idea. So, explain it as you explain to a stranger.
+- 
 
 ## Deployment
 
-Deployment will be done automatically by our CI/CD system.
+Deployment will be done automatically by our CI/CD system. We're using Heroku as our PaaS solution and a CI/CD system.
+
+We have 2 branches: `develop` and `master`. `master` branch is protected from direct pushes, and PR merges to `master` is also protected by our CI system.
+For your PR to be accepted, it should pass all the tests and it shouldn't contain any linting errors. Here's the steps you should take from opening your PR to deployment:
+
+1. Push your branch and open your PR, according to the PR descriptions above.
+
+2. Tests will be run automatically by our CI integration; so just wait a bit. In case your tests fail, click on the link to see the errors and fix them.
+
+3. After your tests pass, request a review from a contributor or code-owner.
+
+4. When your PR passes the review, merge it to `develop`; our CD system will automatically push it to production.
