@@ -22,7 +22,7 @@ module Api
         @route = Route.new(route_params)
 
         if @route.save
-          render json: @route, status: :created, location: @route
+          render json: @route, status: :created
         else
           render json: @route.errors, status: :unprocessable_entity
         end

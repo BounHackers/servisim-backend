@@ -22,7 +22,7 @@ module Api
         @parent = Parent.new(parent_params)
 
         if @parent.save
-          render json: @parent, status: :created, location: @parent
+          render json: @parent, status: :created
         else
           render json: @parent.errors, status: :unprocessable_entity
         end
