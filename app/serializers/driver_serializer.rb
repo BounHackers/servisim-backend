@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: drivers
@@ -10,9 +9,10 @@
 #  password   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  vehicle_id :string
 #
 
 class DriverSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password
+  attributes :id, :username, :password, :vehicle_id
   has_one :school
 end

@@ -44,11 +44,11 @@ module Api
 
       def login
         parent = Parent.find { |u| u.username == params[:username] }
-        if parent && test_password(params[:password], parent.password)
+        if parent && test_password(params[:password], parent[:password])
           session.clear
           session[:user_id] = parent.id
           session[:user_type] = 'parent'
-          render json: @parent
+          render json: parent
         else
           error = { error: 'Not authorized' }
           render json: error, status: :unauthorized
@@ -65,10 +65,6 @@ module Api
       # Only allow a trusted parameter "white list" through.
       def parent_params
         params.permit(:name, :location, :username, :password)
-      end
-
-      def hash_password(password)
-        BCrypt::Password.create(password).to_s
       end
 
       def test_password(password, hash)

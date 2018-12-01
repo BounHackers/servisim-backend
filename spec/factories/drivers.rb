@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: drivers
@@ -10,6 +9,7 @@
 #  password   :string
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  vehicle_id :string
 #
 
 FactoryBot.define do

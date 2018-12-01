@@ -14,5 +14,12 @@
 #
 
 class Parent < ApplicationRecord
-  has_many :kids
+  has_many :kids, dependent: :destroy
+
+  before_save :create_hashed_password, if: :password_changed?
+
+  def create_hashed_password
+    # validation code not shown
+    self.password = BCrypt::Password.create(password).to_s
+  end
 end
