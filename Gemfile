@@ -34,6 +34,7 @@ group :development, :test do
   # Use RSpec for specs
   gem 'factory_bot_rails'
   gem 'rspec-rails', '>= 3.5.0'
+  gem 'rubocop'
 end
 
 group :development do
@@ -42,7 +43,6 @@ group :development do
   gem 'annotate'
   gem 'rspec_api_documentation'
   gem 'spring'
-  gem 'rubocop'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
