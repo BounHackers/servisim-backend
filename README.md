@@ -1,6 +1,6 @@
 # Servisim Backend
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) [![MIT License](https://img.shields.io/dub/l/vibe-d.svg)](https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) ![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) [![MIT License](https://img.shields.io/dub/l/vibe-d.svg)](https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE) [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues) ![GitHub issues open](https://img.shields.io/github/issues-raw/BounHackers/servisim-backend.svg?maxAge=2592000) ![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/BounHackers/servisim-backend.svg?maxAge=2592000)
 
 
 It's the Ruby on Rails REST API backend for the mobile application, called Servisim.
