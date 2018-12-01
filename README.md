@@ -54,7 +54,6 @@ bundle exec rubocop --auto-correct
 - [Read this very good post and follow the advices](https://medium.com/@mscccc/jr-developers-1-pull-requests-you-39a11c3bdd94)
 - Follow the PR template and remove the unused sections
 - Always keep this in mind that you've spent a good amount of time on this issue trying to find a solution but the reviewer has no idea. So, explain it as you explain to a stranger.
-- 
 
 ## Deployment
 
