@@ -14,5 +14,6 @@
 #
 
 class ParentSerializer < ActiveModel::Serializer
-  attributes :id, :name, :age, :location, :username, :password
+  attributes :id, :name, :location, :username
+  has_many :kids
 end

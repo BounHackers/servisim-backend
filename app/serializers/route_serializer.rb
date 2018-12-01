@@ -12,6 +12,6 @@
 
 class RouteSerializer < ActiveModel::Serializer
   attributes :id
-  has_one :kid
-  has_one :driver
+  has_many :kids
+  belongs_to :driver
 end
