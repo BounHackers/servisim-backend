@@ -42,13 +42,13 @@ group :development do
   gem 'annotate'
   gem 'rspec_api_documentation'
   gem 'spring'
+  gem 'rubocop'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
 gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'rack-cors', require: 'rack/cors'
-gem 'rubocop'
 gem 'sdoc'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
