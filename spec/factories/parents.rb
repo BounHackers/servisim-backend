@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: parents
@@ -13,10 +15,10 @@
 
 FactoryBot.define do
   factory :parent do
-    name "MyString"
-    age "MyString"
-    location "MyString"
-    username "MyString"
-    password "MyString"
+    name 'MyString'
+    age 'MyString'
+    location 'MyString'
+    username 'MyString'
+    password 'MyString'
   end
 end

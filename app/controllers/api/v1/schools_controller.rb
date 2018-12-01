@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class SchoolsController < ApplicationController
-      before_action :set_school, only: [:show, :update, :destroy]
+      before_action :set_school, only: %i[show update destroy]
 
       # GET /schools
       def index
@@ -41,15 +43,16 @@ module Api
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_school
-          @school = School.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def school_params
-          params.require(:school).permit(:name, :location)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_school
+        @school = School.find(params[:id])
+      end
+
+      # Only allow a trusted parameter "white list" through.
+      def school_params
+        params.require(:school).permit(:name, :location)
+      end
     end
   end
 end

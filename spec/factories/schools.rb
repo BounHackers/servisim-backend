@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: schools
@@ -11,7 +13,7 @@
 
 FactoryBot.define do
   factory :school do
-    name "MyString"
-    location "MyString"
+    name 'MyString'
+    location 'MyString'
   end
 end

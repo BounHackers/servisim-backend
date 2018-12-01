@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class KidsController < ApplicationController
-      before_action :set_kid, only: [:show, :update, :destroy]
+      before_action :set_kid, only: %i[show update destroy]
 
       # GET /kids
       def index
@@ -41,15 +43,16 @@ module Api
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_kid
-          @kid = Kid.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def kid_params
-          params.require(:kid).permit(:name, :location, :username, :password)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_kid
+        @kid = Kid.find(params[:id])
+      end
+
+      # Only allow a trusted parameter "white list" through.
+      def kid_params
+        params.require(:kid).permit(:name, :location, :username, :password)
+      end
     end
   end
 end

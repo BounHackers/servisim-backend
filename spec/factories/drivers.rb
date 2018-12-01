@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # == Schema Information
 #
 # Table name: drivers
@@ -13,7 +15,7 @@
 FactoryBot.define do
   factory :driver do
     school nil
-    username "MyString"
-    password "MyString"
+    username 'MyString'
+    password 'MyString'
   end
 end

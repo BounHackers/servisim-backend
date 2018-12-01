@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class RoutesController < ApplicationController
-      before_action :set_route, only: [:show, :update, :destroy]
+      before_action :set_route, only: %i[show update destroy]
 
       # GET /routes
       def index
@@ -41,15 +43,16 @@ module Api
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_route
-          @route = Route.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def route_params
-          params.require(:route).permit(:kid_id, :driver_id)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_route
+        @route = Route.find(params[:id])
+      end
+
+      # Only allow a trusted parameter "white list" through.
+      def route_params
+        params.require(:route).permit(:kid_id, :driver_id)
+      end
     end
   end
 end

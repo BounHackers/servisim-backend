@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class DriversController < ApplicationController
-      before_action :set_driver, only: [:show, :update, :destroy]
+      before_action :set_driver, only: %i[show update destroy]
 
       # GET /drivers
       def index
@@ -41,15 +43,16 @@ module Api
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_driver
-          @driver = Driver.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def driver_params
-          params.require(:driver).permit(:school_id, :username, :password)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_driver
+        @driver = Driver.find(params[:id])
+      end
+
+      # Only allow a trusted parameter "white list" through.
+      def driver_params
+        params.require(:driver).permit(:school_id, :username, :password)
+      end
     end
   end
 end

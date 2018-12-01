@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 module Api
   module V1
     class ParentsController < ApplicationController
-      before_action :set_parent, only: [:show, :update, :destroy]
+      before_action :set_parent, only: %i[show update destroy]
 
       # GET /parents
       def index
@@ -48,29 +50,30 @@ module Api
           session[:user_type] = 'parent'
           render json: @parent
         else
-          error = { error: "Not authorized" }
+          error = { error: 'Not authorized' }
           render json: error, status: :unauthorized
         end
       end
 
       private
-        # Use callbacks to share common setup or constraints between actions.
-        def set_parent
-          @parent = Parent.find(params[:id])
-        end
 
-        # Only allow a trusted parameter "white list" through.
-        def parent_params
-          params.require(:parent).permit(:name, :age, :location, :username, :password)
-        end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_parent
+        @parent = Parent.find(params[:id])
+      end
 
-        def hash_password(password)
-          BCrypt::Password.create(password).to_s
-        end
-        
-        def test_password(password, hash)
-          BCrypt::Password.new(hash) == password
-        end
+      # Only allow a trusted parameter "white list" through.
+      def parent_params
+        params.require(:parent).permit(:name, :age, :location, :username, :password)
+      end
+
+      def hash_password(password)
+        BCrypt::Password.create(password).to_s
+      end
+
+      def test_password(password, hash)
+        BCrypt::Password.new(hash) == password
+      end
     end
   end
 end
