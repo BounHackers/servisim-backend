@@ -4,7 +4,9 @@ It's the Ruby on Rails REST API backend for the mobile application, called Servi
 
 ## Documentation
 
-Source code and API documentation can be found on the route `/docs/v1`.
+Source code and API documentation can be found on the route `/docs/v1`, or here: https://servisimapp.herokuapp.com/docs/v1/. You should see a screen like this:
+
+<img width="400" alt="screen shot 2018-12-01 at 21 29 56" src="https://user-images.githubusercontent.com/13895224/49331665-fbf5b300-f5b1-11e8-9705-f4a2f2e168b7.png">
 
 ## Development
 
