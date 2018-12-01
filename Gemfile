@@ -44,7 +44,6 @@ group :development do
   gem 'annotate'
   gem 'rspec_api_documentation'
   gem 'rubocop'
-  gem 'sdoc'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -52,6 +51,7 @@ end
 gem 'active_model_serializers'
 gem 'bcrypt'
 gem 'rack-cors', require: 'rack/cors'
+gem 'sdoc'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
