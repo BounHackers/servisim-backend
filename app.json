@@ -2,8 +2,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test-setup": "bundle install",
-        "test": "bundle exec rubocop --auto-correct"
+        "test": "bundle install && bundle exec rubocop --auto-correct"
       },
       "addons":[
         "heroku-redis",
