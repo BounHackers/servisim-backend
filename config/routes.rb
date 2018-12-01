@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       get 'mercedes/callback' => 'mercedes#callback'
       get 'mercedes/refresh' => 'mercedes#refresh'
       get 'mercedes/vehicles' => 'mercedes#vehicles'
-      get 'mercedes/vehicle_info/:id' => 'mercedes#vehicle_info'
+      get 'mercedes/vehicle_location/:id' => 'mercedes#vehicle_location'
     end
   end
 

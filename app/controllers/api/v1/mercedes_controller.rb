@@ -5,6 +5,8 @@ require 'base64'
 
 CLIENT_ID = 'abbe1fd2-eaeb-4202-b1df-19234a07188e'
 CLIENT_SECRET = 'a285cddc-4423-4658-ab6e-82834a23ba9b'
+# Base URL for Mercedes Benz connected vehicles API
+MB_CV_BASE_URL = 'https://api.mercedes-benz.com/experimental/connectedvehicle/v1'
 
 module Api
   module V1
@@ -44,9 +46,25 @@ module Api
       end
 
       def vehicles
+        response = HTTParty.get(MB_CV_BASE_URL + '/vehicles',
+                                headers: {
+                                  "accept": 'application/json',
+                                  "authorization": 'Bearer ' + params[:access_token]
+                                }).parsed_response
+        render json: response
+      end
+
+      def vehicle_location
+        response = HTTParty.get(MB_CV_BASE_URL + '/vehicles/' + params[:id] + '/location',
+                                headers: {
+                                  "accept": 'application/json',
+                                  "authorization": 'Bearer ' + params[:access_token]
+                                }).parsed_response
+        render json: response
       end
 
       private
+
       def callback_url
         if Rails.env.production?
           'https://servisimapp.herokuapp.com/api/v1/mercedes/callback'
