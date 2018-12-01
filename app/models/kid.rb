@@ -1,0 +1,19 @@
+# == Schema Information
+#
+# Table name: kids
+#
+#  id         :bigint(8)        not null, primary key
+#  name       :string           not null
+#  location   :string
+#  username   :string           not null
+#  password   :string           not null
+#  parent_id  :bigint(8)        not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+class Kid < ApplicationRecord
+  belongs_to :parent
+  has_and_belongs_to_many :routes
+  has_and_belongs_to_many :schools
+end
