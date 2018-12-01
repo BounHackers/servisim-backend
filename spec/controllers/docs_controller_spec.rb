@@ -2,5 +2,5 @@
 
 require 'rails_helper'
 
-RSpec.describe DocsController, type: :controller do
+RSpec.describe Api::V1::DocsController, type: :controller do
 end

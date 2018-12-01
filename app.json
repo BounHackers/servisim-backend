@@ -2,7 +2,7 @@
   "environments": {
     "test": {
       "scripts": {
-        "test": "gem install rubocop && rubocop ."
+        "test": "bundle install && bundle exec rake"
       },
       "addons":[
         "heroku-redis",

@@ -2,30 +2,30 @@
 
 require 'rails_helper'
 
-RSpec.describe SchoolsController, type: :routing do
+RSpec.describe Api::V1::SchoolsController, type: :routing do
   describe 'routing' do
     it 'routes to #index' do
-      expect(get: '/schools').to route_to('schools#index')
+      expect(get: '/api/v1/schools').to route_to('api/v1/schools#index')
     end
 
     it 'routes to #show' do
-      expect(get: '/schools/1').to route_to('schools#show', id: '1')
+      expect(get: '/api/v1/schools/1').to route_to('api/v1/schools#show', id: '1')
     end
 
     it 'routes to #create' do
-      expect(post: '/schools').to route_to('schools#create')
+      expect(post: '/api/v1/schools').to route_to('api/v1/schools#create')
     end
 
     it 'routes to #update via PUT' do
-      expect(put: '/schools/1').to route_to('schools#update', id: '1')
+      expect(put: '/api/v1/schools/1').to route_to('api/v1/schools#update', id: '1')
     end
 
     it 'routes to #update via PATCH' do
-      expect(patch: '/schools/1').to route_to('schools#update', id: '1')
+      expect(patch: '/api/v1/schools/1').to route_to('api/v1/schools#update', id: '1')
     end
 
     it 'routes to #destroy' do
-      expect(delete: '/schools/1').to route_to('schools#destroy', id: '1')
+      expect(delete: '/api/v1/schools/1').to route_to('api/v1/schools#destroy', id: '1')
     end
   end
 end
