@@ -44,6 +44,7 @@ group :development do
   gem 'annotate'
   gem 'rspec_api_documentation'
   gem 'rubocop'
+  gem 'sdoc'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
