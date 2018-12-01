@@ -13,4 +13,6 @@
 
 class SchoolSerializer < ActiveModel::Serializer
   attributes :id, :name, :location
+  has_many :kids
+  has_many :drivers
 end

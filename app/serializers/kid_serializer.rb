@@ -15,5 +15,8 @@
 #
 
 class KidSerializer < ActiveModel::Serializer
-  attributes :id, :name, :location, :username, :password
+  attributes :id, :name, :location, :username
+  belongs_to :parent
+  has_many :routes
+  has_many :schools
 end

@@ -64,7 +64,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def parent_params
-        params.require(:parent).permit(:name, :age, :location, :username, :password)
+        params.permit(:name, :location, :username, :password)
       end
 
       def hash_password(password)
