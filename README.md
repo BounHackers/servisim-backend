@@ -7,6 +7,8 @@ It's the Ruby on Rails REST API for our mobile application, called Servisim.
 
 Current API root: https://servisimapp.herokuapp.com/api/v1/
 
+Postman docs: https://documenter.getpostman.com/view/339913/RzfdqqfW
+
 ## Documentation
 
 Source code and API documentation can be found on the route `/docs/v1`, or here: https://servisimapp.herokuapp.com/docs/v1/. You should see a screen like this:
