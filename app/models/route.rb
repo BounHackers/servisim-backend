@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 # == Schema Information
 #
 # Table name: routes
@@ -8,6 +7,7 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  driver_id  :bigint(8)
+#  start_time :datetime
 #
 
 class Route < ApplicationRecord

@@ -51,7 +51,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def route_params
-        params.permit(:kid_ids, :driver_id)
+        params.permit(:kid_ids, :driver_id, :start_time)
       end
     end
   end
