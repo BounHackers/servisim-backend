@@ -13,6 +13,6 @@
 #
 
 class DriverSerializer < ActiveModel::Serializer
-  attributes :id, :username, :password, :vehicle_id
+  attributes :id, :username, :vehicle_id
   has_one :school
 end
