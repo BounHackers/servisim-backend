@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2018_12_02_081513) do
     t.datetime "updated_at", null: false
     t.bigint "driver_id"
     t.bigint "start_time"
-    t.jsonb "late_kids", default: "{}"
+    t.string "late_kids"
     t.index ["driver_id"], name: "index_routes_on_driver_id"
   end
 
