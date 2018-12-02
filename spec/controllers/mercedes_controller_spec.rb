@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe MercedesController, type: :controller do
+RSpec.describe Api::V1::MercedesController, type: :controller do
 
 end
