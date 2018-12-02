@@ -51,7 +51,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def school_params
-        params.permit(:name, :location, :kid_ids)
+        params.permit(:name, :location, kid_ids: [])
       end
     end
   end
