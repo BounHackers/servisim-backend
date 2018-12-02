@@ -190,7 +190,7 @@
   <span class="ruby-ivar">@parent</span> = <span class="ruby-constant">Parent</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">parent_params</span>)
 
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">save</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@parent</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>, <span class="ruby-value">location:</span> <span class="ruby-ivar">@parent</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@parent</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@parent</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>
   <span class="ruby-keyword">end</span>
@@ -307,11 +307,11 @@
                 <pre><span class="ruby-comment"># File app/controllers/api/v1/parents_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">login</span>
   <span class="ruby-identifier">parent</span> = <span class="ruby-constant">Parent</span>.<span class="ruby-identifier">find</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">u</span><span class="ruby-operator">|</span> <span class="ruby-identifier">u</span>.<span class="ruby-identifier">username</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">params</span>[<span class="ruby-value">:username</span>] }
-  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">test_password</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:password</span>], <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">password</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">parent</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">test_password</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:password</span>], <span class="ruby-identifier">parent</span>[<span class="ruby-value">:password</span>])
     <span class="ruby-identifier">session</span>.<span class="ruby-identifier">clear</span>
     <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_id</span>] = <span class="ruby-identifier">parent</span>.<span class="ruby-identifier">id</span>
     <span class="ruby-identifier">session</span>[<span class="ruby-value">:user_type</span>] = <span class="ruby-string">&#39;parent&#39;</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@parent</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">parent</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-identifier">error</span> = { <span class="ruby-value">error:</span> <span class="ruby-string">&#39;Not authorized&#39;</span> }
     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-identifier">error</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unauthorized</span>

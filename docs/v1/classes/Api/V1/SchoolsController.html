@@ -178,7 +178,7 @@
   <span class="ruby-ivar">@school</span> = <span class="ruby-constant">School</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">school_params</span>)
 
   <span class="ruby-keyword">if</span> <span class="ruby-ivar">@school</span>.<span class="ruby-identifier">save</span>
-    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@school</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>, <span class="ruby-value">location:</span> <span class="ruby-ivar">@school</span>
+    <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@school</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:created</span>
   <span class="ruby-keyword">else</span>
     <span class="ruby-identifier">render</span> <span class="ruby-value">json:</span> <span class="ruby-ivar">@school</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-value">status:</span> <span class="ruby-value">:unprocessable_entity</span>
   <span class="ruby-keyword">end</span>

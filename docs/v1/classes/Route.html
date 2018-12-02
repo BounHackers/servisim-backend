@@ -15,8 +15,8 @@
 
   
     
-    <meta name="description" content="Schema Information  Table name: routes  id         :bigint(8)        not null, primary key kid_id     :bigint(8) created_at :datetime         not null updated_at :datetime         not null .">
-    <meta property="og:description" content="Schema Information  Table name: routes  id         :bigint(8)        not null, primary key kid_id     :bigint(8) created_at :datetime         not null updated_at :datetime         not null .">
+    <meta name="description" content="Schema Information  Table name: routes  id         :bigint(8)        not null, primary key created_at :datetime         not null updated_at :datetime         not null driver_id  :bigint(8) start_time .">
+    <meta property="og:description" content="Schema Information  Table name: routes  id         :bigint(8)        not null, primary key created_at :datetime         not null updated_at :datetime         not null driver_id  :bigint(8) start_time .">
   
 
     <meta name="keywords" content="Route class">
@@ -53,9 +53,10 @@
 <p>Table name: routes</p>
 
 <pre><code>id         :bigint(8)        not null, primary key
-kid_id     :bigint(8)
 created_at :datetime         not null
 updated_at :datetime         not null
+driver_id  :bigint(8)
+start_time :datetime
 </code></pre>
 
     </div>

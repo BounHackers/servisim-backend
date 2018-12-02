@@ -24,7 +24,7 @@
                 README.md
                 
             </li>
-            <li>Last modified: 2018-12-01 18:34:39 +0300</li>
+            <li>Last modified: 2018-12-02 02:04:39 +0300</li>
         </ul>
     </div>
 
@@ -35,12 +35,105 @@
       
 <h1 id="label-Servisim+Backend">Servisim Backend</h1>
 
-<p>It&#39;s the Ruby on Rails REST API backend for the mobile application,
-called Servisim.</p>
+<p><a href="https://heroku.com/deploy"><img
+src="https://www.herokucdn.com/deploy/button.svg"></a> <a
+href="https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE"><img
+src="https://img.shields.io/dub/l/vibe-d.svg"></a> <a
+href="https://github.com/dwyl/esta/issues"><img
+src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat"></a>
+<img
+src="https://img.shields.io/github/issues-raw/BounHackers/servisim-backend.svg?maxAge=2592000">
+<img
+src="https://img.shields.io/github/issues-closed-raw/BounHackers/servisim-backend.svg?maxAge=2592000"></p>
+
+<p>It&#39;s the Ruby on Rails REST API for our mobile application, called
+Servisim.</p>
+
+<p>Current API root: <a
+href="https://servisimapp.herokuapp.com/api/v1">servisimapp.herokuapp.com/api/v1</a>/</p>
+
+<h2 id="label-Documentation">Documentation</h2>
+
+<p>Source code and API documentation can be found on the route
+<code>/docs/v1</code>, or here: <a
+href="https://servisimapp.herokuapp.com/docs/v1">servisimapp.herokuapp.com/docs/v1</a>/.
+You should see a screen like this:</p>
+
+<p>&lt;img width=“400” alt=“screen shot 2018-12-01 at 21 29 56” src=“<img
+src="https://user-images.githubusercontent.com/13895224/49331665-fbf5b300-f5b1-11e8-9705-f4a2f2e168b7.png"
+/>”&gt;</p>
 
 <h2 id="label-Development">Development</h2>
+<ol><li>
+<p>Clone the repo: <code> git clone
+git@github.com:BounHackers/servisim-backend.git cd servisim-backend </code></p>
+</li><li>
+<p>We&#39;re currently using Ruby 2.5.1, so go download it. You can always see
+the Ruby version we&#39;re using in the <code>.ruby-version</code> file.</p>
+</li><li>
+<p>We use PostgreSQL v10.5 for our database, go download it.</p>
+</li><li>
+<p>Install the dependencies: <code> gem install bundler bundle </code></p>
+</li><li>
+<p>Create the development database: <code> bundle exec rails db:migrate
+</code></p>
+</li><li>
+<p>Run the application and you&#39;re good to go: <code> bundle exec rails s
+</code></p>
+</li></ol>
+
+<h2 id="label-Code+Style">Code Style</h2>
+
+<p>We are using "the Rails way" as our code style. You can check the Rails
+conventions here: <a
+href="https://github.com/rubocop-hq/rails-style-guide">github.com/rubocop-hq/rails-style-guide</a></p>
+
+<h2 id="label-Code+Quality">Code Quality</h2>
+
+<p>Before every commit, run the linter and fix your linting issues
+automatically: <code> bundle exec rubocop --auto-correct </code></p>
+
+<h2 id="label-Pull+Requests">Pull Requests</h2>
+<ul><li>
+<p><a
+href="https://medium.com/@mscccc/jr-developers-1-pull-requests-you-39a11c3bdd94">Read
+this very good post and follow the advices</a></p>
+</li><li>
+<p>Follow the PR template and remove the unused sections</p>
+</li><li>
+<p>Always keep this in mind that you&#39;ve spent a good amount of time on
+this issue trying to find a solution but the reviewer has no idea. So,
+explain it as you explain to a stranger.</p>
+</li></ul>
 
 <h2 id="label-Deployment">Deployment</h2>
+
+<p>Deployment will be done automatically by our CI/CD system. We&#39;re using
+Heroku as our PaaS solution and a CI/CD system.</p>
+
+<p>We have 2 branches: <code>develop</code> and <code>master</code>.
+<code>master</code> branch is protected from direct pushes, and PR merges
+to <code>master</code> is also protected by our CI system. For your PR to
+be accepted, it should pass all the tests and it shouldn&#39;t contain any
+linting errors. Here&#39;s the steps you should take from opening your PR
+to deployment:</p>
+<ol><li>
+<p>Push your branch and open your PR, according to the PR descriptions above.</p>
+</li><li>
+<p>Tests will be run automatically by our CI integration; so just wait a bit.
+In case your tests fail, click on the link to see the errors and fix them.</p>
+</li><li>
+<p>After your tests pass, request a review from a contributor or code-owner.</p>
+</li><li>
+<p>When your PR passes the review, merge it to <code>develop</code>; our CD
+system will automatically push it to production when it&#39;s on
+<code>master</code>.</p>
+</li></ol>
+
+<h2 id="label-License">License</h2>
+
+<p><a
+href="https://raw.githubusercontent.com/BounHackers/servisim-backend/master/LICENSE">MIT</a></p>
 
     </div>
   
