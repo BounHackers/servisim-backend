@@ -11,7 +11,7 @@
 #
 
 class RouteSerializer < ActiveModel::Serializer
-  attributes :id, :start_time
+  attributes :id, :start_time, :late_kids
   has_many :kids
   belongs_to :driver
 end
