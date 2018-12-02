@@ -42,6 +42,19 @@ module Api
         @driver.destroy
       end
 
+      def login
+        driver = Driver.find { |u| u.username == params[:username] }
+        if driver && BCrypt::Password.new(driver[:password]) == params[:password]
+          session.clear
+          session[:user_id] = driver.id
+          session[:user_type] = 'driver'
+          render json: driver
+        else
+          error = { error: 'Not authorized' }
+          render json: error, status: :unauthorized
+        end
+      end
+
       private
 
       # Use callbacks to share common setup or constraints between actions.

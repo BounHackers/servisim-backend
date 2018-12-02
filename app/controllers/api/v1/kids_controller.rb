@@ -42,6 +42,19 @@ module Api
         @kid.destroy
       end
 
+      def login
+        kid = Kid.find { |u| u.username == params[:username] }
+        if kid && BCrypt::Password.new(kid[:password]) == params[:password]
+          session.clear
+          session[:user_id] = kid.id
+          session[:user_type] = 'kid'
+          render json: kid
+        else
+          error = { error: 'Not authorized' }
+          render json: error, status: :unauthorized
+        end
+      end
+
       private
 
       # Use callbacks to share common setup or constraints between actions.

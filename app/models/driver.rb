@@ -15,4 +15,11 @@
 class Driver < ApplicationRecord
   belongs_to :school
   has_many :routes
+
+  before_save :create_hashed_password, if: :password_changed?
+
+  def create_hashed_password
+    # validation code not shown
+    self.password = BCrypt::Password.create(password).to_s
+  end
 end

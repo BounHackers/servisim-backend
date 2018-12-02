@@ -18,4 +18,11 @@ class Kid < ApplicationRecord
   belongs_to :parent
   has_and_belongs_to_many :routes
   has_and_belongs_to_many :schools
+
+  before_save :create_hashed_password, if: :password_changed?
+
+  def create_hashed_password
+    # validation code not shown
+    self.password = BCrypt::Password.create(password).to_s
+  end
 end
